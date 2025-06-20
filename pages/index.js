@@ -55,6 +55,7 @@ export default function Home() {
                         }}
                     >
                         Enter text to translate:
+                        Our AI will autodetect language used.
                     </label>
 
                     <textarea
@@ -118,3 +119,5 @@ export default function Home() {
 
 
 }
+
+
