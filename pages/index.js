@@ -1,8 +1,9 @@
 ﻿import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link'; // ✅ Required for internal routing
 
 export default function Home() {
-    const [consentGiven, setConsentGiven] = useState(false);   // ✔ state name
+    const [consentGiven, setConsentGiven] = useState(false);
     const router = useRouter();
 
     return (
@@ -53,36 +54,34 @@ export default function Home() {
                     <label style={{ fontSize: '0.5rem', color: '#000', fontWeight: 'bold' }}>
                         <input
                             type="checkbox"
-                            checked={consentGiven}                         
-                            onChange={(e) => setConsentGiven(e.target.checked)}  
+                            checked={consentGiven}
+                            onChange={(e) => setConsentGiven(e.target.checked)}
                             style={{ marginRight: '0.5rem' }}
                         />
-                        I I consent to my translations being shared with OpenAI for evaluation and improvement. and accept the{' '}
-                        <a
-                            href="/terms"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
+                        I consent to my translations being shared with OpenAI for evaluation and improvement. and accept the{' '}
+                        <Link href="/terms">
+                            <span style={{
                                 color: '#000',
                                 fontWeight: 'bold',
                                 textDecoration: 'underline',
-                            }}
-                        >
-                            Terms of Use
-                        </a>
+                                cursor: 'pointer'
+                            }}>
+                                Terms of Use
+                            </span>
+                        </Link>
                     </label>
 
                     <br />
-                    <a
-                        href="/privacy"
-                        style={{
+                    <Link href="/privacy">
+                        <span style={{
                             fontSize: '0.5rem',
                             textDecoration: 'underline',
                             color: '#333',
-                        }}
-                    >
-                        View Privacy Policy
-                    </a>
+                            cursor: 'pointer'
+                        }}>
+                            View Privacy Policy
+                        </span>
+                    </Link>
                 </div>
 
                 {/* GET STARTED button */}
@@ -107,3 +106,4 @@ export default function Home() {
         </div>
     );
 }
+
