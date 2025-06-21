@@ -52,7 +52,7 @@ export default function ChoosePage() {
                 Choose your dialect
             </h1>
             <p style={{ marginBottom: '2rem', fontSize: '0.95rem' }}>
-                This is the dialect you want to translate to.
+                This is the dialect you want to translate to
             </p>
 
             <div
