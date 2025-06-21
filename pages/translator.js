@@ -130,7 +130,7 @@ export default function Translator() {
                             border: '1px solid #ccc',
                         }}
                     >
-                        {/* Language options (unchanged) */}
+                        {/* Global Languages */}
                         <option value="English">English</option>
                         <option value="Spanish">Español</option>
                         <option value="French">Français</option>
@@ -147,10 +147,107 @@ export default function Translator() {
                         <option value="Persian">فارسی</option>
                         <option value="Hebrew">עברית</option>
                         <option value="Swahili">Kiswahili</option>
+
+                        {/* Aramaic Dialects */}
                         <option value="Classical Syriac">ܠܫܢܐ ܣܘܪܝܝܐ ܥܬܝܩܐ</option>
                         <option value="Turoyo">ܛܘܪܝܝܐ</option>
-                        {/* Arabic and other global options... */}
+
+                        {/* Arabic Dialects */}
+                        <option value="Modern Standard Arabic">العربية الفصحى</option>
+                        <option value="Moroccan Arabic">العربية المغربية</option>
+                        <option value="Algerian Arabic">العربية الجزائرية</option>
+                        <option value="Tunisian Arabic">العربية التونسية</option>
+                        <option value="Libyan Arabic">العربية الليبية</option>
+                        <option value="Mauritanian Arabic">العربية الموريتانية</option>
+                        <option value="Egyptian Arabic">العربية المصرية</option>
+                        <option value="Sudanese Arabic">العربية السودانية</option>
+                        <option value="Chadian Arabic">العربية التشادية</option>
+                        <option value="Somali Arabic">العربية الصومالية</option>
+                        <option value="Djiboutian Arabic">العربية الجيبوتية</option>
+                        <option value="Comorian Arabic">العربية القمرية</option>
+                        <option value="Saudi Arabic">العربية السعودية</option>
+                        <option value="Emirati Arabic">العربية الإماراتية</option>
+                        <option value="Qatari Arabic">العربية القطرية</option>
+                        <option value="Kuwaiti Arabic">العربية الكويتية</option>
+                        <option value="Bahraini Arabic">العربية البحرينية</option>
+                        <option value="Omani Arabic">العربية العمانية</option>
+                        <option value="Yemeni Arabic">العربية اليمنية</option>
+                        <option value="Iraqi Arabic">العربية العراقية</option>
+                        <option value="Syrian Arabic">العربية السورية</option>
+                        <option value="Lebanese Arabic">العربية اللبنانية</option>
+                        <option value="Jordanian Arabic">العربية الأردنية</option>
+                        <option value="Palestinian Arabic">العربية الفلسطينية</option>
+
+                        {/* European Languages */}
+                        <option value="Greek">Ελληνικά</option>
+                        <option value="Polish">Polski</option>
+                        <option value="Lithuanian">Lietuvių</option>
+                        <option value="Latvian">Latviešu</option>
+                        <option value="Slovak">Slovenčina</option>
+                        <option value="Slovene">Slovenščina</option>
+                        <option value="Czech">Čeština</option>
+                        <option value="Romanian">Română</option>
+                        <option value="Hungarian">Magyar</option>
+                        <option value="Dutch">Nederlands</option>
+                        <option value="Swedish">Svenska</option>
+                        <option value="Finnish">Suomi</option>
+                        <option value="Danish">Dansk</option>
+                        <option value="Norwegian">Norsk</option>
+                        <option value="Icelandic">Íslenska</option>
+                        <option value="Estonian">Eesti</option>
+                        <option value="Albanian">Shqip</option>
+                        <option value="Macedonian">Македонски</option>
+                        <option value="Serbian">Српски</option>
+                        <option value="Bulgarian">Български</option>
+                        <option value="Croatian">Hrvatski</option>
+                        <option value="Bosnian">Bosanski</option>
+                        <option value="Georgian">ქართული</option>
+                        <option value="Armenian">Հայերեն</option>
+                        <option value="Azerbaijani">Azərbaycan dili</option>
+
+                        {/* Major Regional European Languages */}
+                        <option value="Catalan">Català</option>
+                        <option value="Irish">Gaeilge</option>
+                        <option value="Welsh">Cymraeg</option>
+                        <option value="Breton">Brezhoneg</option>
+                        <option value="Scottish Gaelic">Gàidhlig</option>
+                        <option value="Occitan">Occitan</option>
+
+                        {/* African Languages */}
+                        <option value="Amharic">አማርኛ</option>
+                        <option value="Tigrinya">ትግርኛ</option>
+                        <option value="Somali">Soomaali</option>
+                        <option value="Oromo">Afaan Oromoo</option>
+                        <option value="Hausa">Hausa</option>
+                        <option value="Yoruba">Yorùbá</option>
+                        <option value="Igbo">Igbo</option>
+                        <option value="Zulu">IsiZulu</option>
+                        <option value="Xhosa">IsiXhosa</option>
+                        <option value="Afrikaans">Afrikaans</option>
+                        <option value="Shona">ChiShona</option>
+                        <option value="Wolof">Wolof</option>
+                        <option value="Fula">Pulaar</option>
+                        <option value="Berber">Tamazight</option>
+
+                        {/* Asian Languages */}
+                        <option value="Bengali">বাংলা</option>
+                        <option value="Tamil">தமிழ்</option>
+                        <option value="Telugu">తెలుగు</option>
+                        <option value="Malayalam">മലയാളം</option>
+                        <option value="Kannada">ಕನ್ನಡ</option>
+                        <option value="Sinhala">සිංහල</option>
+                        <option value="Thai">ไทย</option>
+                        <option value="Vietnamese">Tiếng Việt</option>
+                        <option value="Burmese">မြန်မာစာ</option>
+                        <option value="Mongolian">Монгол</option>
+                        <option value="Khmer">ភាសាខ្មែរ</option>
+                        <option value="Tagalog">Tagalog</option>
+                        <option value="Lao">ລາວ</option>
+                        <option value="Indonesian">Bahasa Indonesia</option>
+                        <option value="Javanese">ꦧꦱꦗꦮ</option>
+                        <option value="Sundanese">Basa Sunda</option>
                     </select>
+
 
                     <label htmlFor="inputText" style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.95rem', fontWeight: 600 }}>
                         Enter text to translate:
