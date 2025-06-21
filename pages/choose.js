@@ -1,97 +1,101 @@
-﻿// pages/choose.js
-import { useRouter } from 'next/router';
+﻿import { useRouter } from 'next/router';
 
 export default function ChoosePage() {
     const router = useRouter();
 
-    // Navigate to /translator, passing the chosen dialect in the query-string
-    const handleSelect = (code) =>
-        router.push(`/translator?dialect=${encodeURIComponent(code)}`);
-
-    /* 24 dialect cards – code is what /translator will receive,
-       label is what the user sees, flag is an emoji placeholder */
+    // Add descriptions for tooltips
     const dialects = [
-        { code: 'algerian', label: 'Algerian Arabic', flag: '🇩🇿' },
-        { code: 'tunisian', label: 'Tunisian Arabic', flag: '🇹🇳' },
-        { code: 'moroccan', label: 'Moroccan Arabic', flag: '🇲🇦' },
-        { code: 'mauritanian', label: 'Mauritanian Arabic', flag: '🇲🇷' },
-        { code: 'libyan', label: 'Libyan Arabic', flag: '🇱🇾' },
-        { code: 'egyptian', label: 'Egyptian Arabic', flag: '🇪🇬' },
-        { code: 'sudanese', label: 'Sudanese Arabic', flag: '🇸🇩' },
-        { code: 'chadian', label: 'Chadian Arabic', flag: '🇹🇩' },
-        { code: 'somali', label: 'Somali Arabic', flag: '🇸🇴' },
-        { code: 'djiboutian', label: 'Djiboutian Arabic', flag: '🇩🇯' },
-        { code: 'comorian', label: 'Comorian Arabic', flag: '🇰🇲' },
-        { code: 'saudi', label: 'Saudi Arabic', flag: '🇸🇦' },
-        { code: 'emirati', label: 'Emirati Arabic', flag: '🇦🇪' },
-        { code: 'qatari', label: 'Qatari Arabic', flag: '🇶🇦' },
-        { code: 'kuwaiti', label: 'Kuwaiti Arabic', flag: '🇰🇼' },
-        { code: 'bahraini', label: 'Bahraini Arabic', flag: '🇧🇭' },
-        { code: 'omani', label: 'Omani Arabic', flag: '🇴🇲' },
-        { code: 'yemeni', label: 'Yemeni Arabic', flag: '🇾🇪' },
-        { code: 'iraqi', label: 'Iraqi Arabic', flag: '🇮🇶' },
-        { code: 'syrian', label: 'Syrian Arabic', flag: '🇸🇾' },
-        { code: 'lebanese', label: 'Lebanese Arabic', flag: '🇱🇧' },
-        { code: 'jordanian', label: 'Jordanian Arabic', flag: '🇯🇴' },
-        { code: 'palestinian', label: 'Palestinian Arabic', flag: '🇵🇸' },
-        { code: 'msa', label: 'Modern Standard Arabic', flag: '📖' },
+        { code: 'dz', file: 'dz.svg', label: 'Algeria', info: 'Spoken in North Africa with French influence.' },
+        { code: 'tn', file: 'tn.svg', label: 'Tunisia', info: 'Tunisian Arabic with Berber and French words.' },
+        { code: 'ma', file: 'ma.svg', label: 'Morocco', info: 'Darija, heavily influenced by Berber and French.' },
+        { code: 'mr', file: 'mr.svg', label: 'Mauritania', info: 'Hassaniya dialect, close to Bedouin speech.' },
+        { code: 'ly', file: 'ly.svg', label: 'Libya', info: 'Libyan Arabic, close to Maghrebi with Italian influence.' },
+        { code: 'eg', file: 'eg.svg', label: 'Egypt', info: 'Egyptian Arabic, widely understood in media.' },
+        { code: 'sd', file: 'sd.svg', label: 'Sudan', info: 'Sudanese Arabic, unique pronunciations and vocabulary.' },
+        { code: 'td', file: 'td.svg', label: 'Chad', info: 'Chadian Arabic, also known as Shuwa Arabic.' },
+        { code: 'so', file: 'so.svg', label: 'Somalia', info: 'Spoken in Somali Arab communities.' },
+        { code: 'dj', file: 'dj.svg', label: 'Djibouti', info: 'Djiboutian Arabic, a mix with Somali and French.' },
+        { code: 'km', file: 'km.svg', label: 'Comoros', info: 'Arabic influenced by Swahili and French.' },
+        { code: 'sa', file: 'sa.svg', label: 'Saudi Arabia', info: 'Gulf Arabic with regional tribal dialects.' },
+        { code: 'ae', file: 'ae.svg', label: 'UAE', info: 'Emirati Arabic, a Gulf dialect.' },
+        { code: 'qa', file: 'qa.svg', label: 'Qatar', info: 'Closely related to Gulf Arabic.' },
+        { code: 'kw', file: 'kw.svg', label: 'Kuwait', info: 'Kuwaiti Arabic, part of Gulf Arabic group.' },
+        { code: 'bh', file: 'bh.svg', label: 'Bahrain', info: 'Bahraini Arabic, influenced by Persian and English.' },
+        { code: 'om', file: 'om.svg', label: 'Oman', info: 'Omani Arabic with coastal dialects.' },
+        { code: 'ye', file: 'ye.svg', label: 'Yemen', info: 'Yemeni Arabic, deeply rooted in Classical Arabic.' },
+        { code: 'iq', file: 'iq.svg', label: 'Iraq', info: 'Mesopotamian Arabic, widely spoken.' },
+        { code: 'sy', file: 'sy.svg', label: 'Syria', info: 'Syrian Arabic, part of Levantine dialects.' },
+        { code: 'lb', file: 'lb.svg', label: 'Lebanon', info: 'Lebanese Arabic, French and Phoenician influence.' },
+        { code: 'jo', file: 'jo.svg', label: 'Jordan', info: 'Jordanian Arabic, a Levantine dialect.' },
+        { code: 'ps', file: 'ps.svg', label: 'Palestine', info: 'Palestinian Arabic, similar to Jordanian and Syrian.' },
+        { code: 'ar', file: 'ar.svg', label: 'Modern Standard Arabic', info: 'Formal Arabic used in writing and media.' },
     ];
+
+    const handleSelect = (code) => {
+        router.push(`/translator?dialect=${encodeURIComponent(code)}`);
+    };
 
     return (
         <div
             style={{
                 minHeight: '100vh',
-                backgroundColor: '#c89a6b',          // warm sand-brown
-                padding: '2rem',
-                fontFamily: 'Segoe UI, sans-serif',
-                color: '#222',
+                backgroundColor: '#c89a6b',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
+                fontFamily: 'Segoe UI, sans-serif',
+                padding: '2rem',
+                color: '#222',
             }}
         >
-            <h1 style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>
+            <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>
                 Choose your dialect
             </h1>
             <p style={{ marginBottom: '2rem', fontSize: '0.95rem' }}>
-                Our AI will automatically detect the language you type.
+                This is the dialect you want to translate to.
             </p>
 
-            {/* Grid of cards */}
             <div
                 style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
                     gap: '1rem',
                     width: '100%',
-                    maxWidth: '720px',
+                    maxWidth: '800px',
                 }}
             >
-                {dialects.map(({ code, label, flag }) => (
+                {dialects.map(({ code, file, label, info }) => (
                     <button
                         key={code}
+                        title={info}
                         onClick={() => handleSelect(code)}
                         style={{
                             backgroundColor: '#fff',
                             border: '1px solid #eee',
-                            borderRadius: '10px',
-                            padding: '0.8rem 0.4rem',
+                            borderRadius: '12px',
+                            padding: '1rem',
                             cursor: 'pointer',
-                            textAlign: 'center',
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            transition: 'transform 0.15s',
+                            transition: 'transform 0.15s ease',
+                            boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
                         }}
                         onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.06)')}
                         onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                     >
-                        <span style={{ fontSize: '1.8rem', marginBottom: '0.25rem' }}>
-                            {flag}
-                        </span>
-                        <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>
-                            {label.split(' ')[0]} {/* show just “Algerian”, “Qatari”… */}
+                        <img
+                            src={`/flags/${file}`}
+                            alt={`${label} flag`}
+                            style={{
+                                width: '80px',
+                                height: 'auto',
+                                marginBottom: '0.5rem',
+                            }}
+                        />
+                        <span style={{ fontSize: '0.8rem', color: '#222', fontWeight: 500 }}>
+                            {label}
                         </span>
                     </button>
                 ))}
