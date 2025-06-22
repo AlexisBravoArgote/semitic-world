@@ -241,7 +241,7 @@ export default function Translator() {
                             <option value="Javanese">ꦧꦱꦗꦮ</option>
                             <option value="Sundanese">Basa Sunda</option>
                         </select>
-                            <span style={{ fontSize: '0.85rem', color: '#555' }}>
+                            <span style={{ fontSize: '0.5rem', color: '#000' }}>
                                 Our AI will autodetect language if you’re unsure.
                             </span>
                         </div>
