@@ -5,15 +5,15 @@ export default function ChoosePage() {
 
     // Add descriptions for tooltips
     const dialects = [
-        { code: 'dz', file: 'dz.svg', label: 'Algeria', info: 'Spoken in North Africa with French influence.' },
+        { code: 'dz', file: 'dz.svg', label: 'Algeria', info: 'Spoken in North Africa with French and Berber influence.' },
         { code: 'tn', file: 'tn.svg', label: 'Tunisia', info: 'Tunisian Arabic with Berber and French words.' },
         { code: 'ma', file: 'ma.svg', label: 'Morocco', info: 'Darija, heavily influenced by Berber and French.' },
         { code: 'mr', file: 'mr.svg', label: 'Mauritania', info: 'Hassaniya dialect, close to Bedouin speech.' },
         { code: 'ly', file: 'ly.svg', label: 'Libya', info: 'Libyan Arabic, close to Maghrebi with Italian influence.' },
-        { code: 'eg', file: 'eg.svg', label: 'Egypt', info: 'Egyptian Arabic, widely understood in media.' },
+        { code: 'eg', file: 'eg.svg', label: 'Egypt', info: 'Masri, Egyptian Arabic, influenced by ancient Egyptian.' },
         { code: 'sd', file: 'sd.svg', label: 'Sudan', info: 'Sudanese Arabic, unique pronunciations and vocabulary.' },
         { code: 'td', file: 'td.svg', label: 'Chad', info: 'Chadian Arabic, also known as Shuwa Arabic.' },
-        { code: 'so', file: 'so.svg', label: 'Somalia', info: 'Spoken in Somali Arab communities.' },
+        { code: 'so', file: 'so.svg', label: 'Somalia', info: 'Somali Arabic, spoken in Somali Arab communities.' },
         { code: 'dj', file: 'dj.svg', label: 'Djibouti', info: 'Djiboutian Arabic, a mix with Somali and French.' },
         { code: 'km', file: 'km.svg', label: 'Comoros', info: 'Arabic influenced by Swahili and French.' },
         { code: 'sa', file: 'sa.svg', label: 'Saudi Arabia', info: 'Gulf Arabic with regional tribal dialects.' },
@@ -25,7 +25,7 @@ export default function ChoosePage() {
         { code: 'ye', file: 'ye.svg', label: 'Yemen', info: 'Yemeni Arabic, deeply rooted in Classical Arabic.' },
         { code: 'iq', file: 'iq.svg', label: 'Iraq', info: 'Mesopotamian Arabic, widely spoken.' },
         { code: 'sy', file: 'sy.svg', label: 'Syria', info: 'Syrian Arabic, part of Levantine dialects.' },
-        { code: 'lb', file: 'lb.svg', label: 'Lebanon', info: 'Lebanese Arabic, French and Phoenician influence.' },
+        { code: 'lb', file: 'lb.svg', label: 'Lebanon', info: 'Lebanese Arabic,French,Aramaic and Phoenician influence.' },
         { code: 'jo', file: 'jo.svg', label: 'Jordan', info: 'Jordanian Arabic, a Levantine dialect.' },
         { code: 'ps', file: 'ps.svg', label: 'Palestine', info: 'Palestinian Arabic, similar to Jordanian and Syrian.' },
         { code: 'ar', file: 'ar.svg', label: 'Modern Standard Arabic', info: 'Formal Arabic used in writing and media.' },
